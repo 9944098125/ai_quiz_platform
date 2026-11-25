@@ -1,8 +1,8 @@
 set -e
 
 echo "[husky:pre-commit] Checking frontend (lint + typecheck)..."
-pnpm lint:web
-pnpm typecheck:web
+pnpm lint:frontend
+pnpm typecheck:frontend
 
 echo "[husky:pre-commit] Checking backend (lint + typecheck)..."
 pnpm lint:backend
