@@ -1,0 +1,28 @@
+{
+  "name": "ai-quiz-platform",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@12.18.0",
+  "scripts": {
+    "prepare": "husky",
+    "dev:web": "pnpm --filter web dev",
+    "build:web": "pnpm --filter web build",
+    "lint:web": "pnpm --filter web lint",
+    "typecheck:web": "pnpm --filter web typecheck",
+    "test:web": "pnpm --filter web test",
+    "dev:backend": "pnpm --filter backend dev",
+    "build:backend": "pnpm --filter backend build",
+    "lint:backend": "pnpm --filter backend lint",
+    "typecheck:backend": "pnpm --filter backend typecheck",
+    "test:backend": "pnpm --filter backend test",
+    "start:backend": "pnpm --filter backend start",
+    "lint": "pnpm lint:web && pnpm lint:backend",
+    "typecheck": "pnpm typecheck:web && pnpm typecheck:backend",
+    "build": "pnpm build:web && pnpm build:backend",
+    "test": "pnpm test:web && pnpm test:backend",
+    "check": "pnpm lint && pnpm typecheck && pnpm build && pnpm test"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}

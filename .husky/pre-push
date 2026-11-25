@@ -1,0 +1,9 @@
+set -e
+
+echo "[husky:pre-push] Checking frontend (build + test)..."
+pnpm build:web
+pnpm test:web
+
+echo "[husky:pre-push] Checking backend (build + test)..."
+pnpm build:backend
+pnpm test:backend
